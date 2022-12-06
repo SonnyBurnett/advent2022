@@ -8,5 +8,3 @@ while True:
         print(c+distinct_characters, message_string[c:c+distinct_characters])
         break
     c+=1
-
-
