@@ -12,13 +12,10 @@ def parse_command(input_string):
         return -1
     elif input_string[0:4] == '$ cd':
         return 0
-    elif input_string[0:4] == '$ ls':
-        return -2
-    elif input_string[0:4] == 'dir ':
+    elif input_string[0:4] == '$ ls' or input_string[0:4] == 'dir ':
         return -2
     else:
-        num = input_string.split(' ')
-        return int(num[0])
+        return int(input_string.split(' ')[0])
 
 
 def parse_queue(input_queue, total_bytes):
